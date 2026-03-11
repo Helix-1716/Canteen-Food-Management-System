@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Smart Canteen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container" style="max-width: 100%; padding: 0 2rem;">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-shield-halved"></i> AdminPanel</a>
+                <div class="nav-links">
+                    <button id="theme-btn" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+                    <button id="logout-btn" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem;">Admin Dashboard</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary);">Manage Menu & Users</p>
+            </div>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><a href="#" class="btn btn-primary" style="width: 100%; justify-content: flex-start; background-color: rgba(37, 99, 235, 0.1); color: var(--primary);"><i class="fa-solid fa-pizza-slice" style="width: 20px;"></i> Edit Menu</a></li>
+                <li><a href="#" class="btn btn-outline" style="width: 100%; justify-content: flex-start; border: none;"><i class="fa-solid fa-users" style="width: 20px;"></i> Users</a></li>
+                <li><a href="#" class="btn btn-outline" style="width: 100%; justify-content: flex-start; border: none;"><i class="fa-solid fa-chart-line" style="width: 20px;"></i> Analytics</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="stat-cards">
+                <div class="card stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="stat-info">
+                        <h3 id="total-orders">0</h3>
+                        <p class="text-secondary" style="margin: 0; color: var(--text-secondary);">Orders Today</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-icon" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="fa-solid fa-burger"></i></div>
+                    <div class="stat-info">
+                        <h3 id="total-items">0</h3>
+                        <p class="text-secondary" style="margin: 0; color: var(--text-secondary);">Menu Items</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2>Manage Menu</h2>
+                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Item</button>
+            </div>
+
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-food-table">
+                        <!-- Loaded via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

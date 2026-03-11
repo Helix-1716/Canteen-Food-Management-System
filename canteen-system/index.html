@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Canteen Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> SmartCanteen</a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How it works</a>
+                    <button id="theme-btn" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Order food.<br><span>Skip the queue.</span></h1>
+                <p class="hero-subtitle">Experience lightning fast food ordering with our Smart Canteen Management System. Designed for modern students and staff.</p>
+                <div class="hero-actions">
+                    <a href="login.html" class="btn btn-primary">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#how-it-works" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Delicious Food">
+            </div>
+        </section>
+        
+        <section class="container" id="features" style="padding: 4rem 0;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Why Choose Smart Canteen?</h2>
+                <p>Our platform handles everything from order to delivery notification.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card" style="padding: 2rem; text-align: center;">
+                    <i class="fa-solid fa-bolt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3>Fast Ordering</h3>
+                    <p>Order food ahead of time and pick up without standing in long queues.</p>
+                </div>
+                <div class="card" style="padding: 2rem; text-align: center;">
+                    <i class="fa-solid fa-bell-concierge" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3>Live Status</h3>
+                    <p>Get live updates when your food is being prepared and marked ready.</p>
+                </div>
+                <div class="card" style="padding: 2rem; text-align: center;">
+                    <i class="fa-solid fa-wallet" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3>Cashless</h3>
+                    <p>Enjoy a completely cashless experience throughout the campus.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer style="background: var(--surface); padding: 4rem 0 2rem; border-top: 1px solid var(--border); margin-top: 4rem;">
+        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem;">
+            <div style="flex: 1; min-width: 250px;">
+                <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> SmartCanteen</a>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Experience lightning fast food ordering with our Smart Canteen Management System.</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="margin-bottom: 1rem;">Main Pages</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="index.html" style="color: var(--text-secondary); transition: var(--transition);">Home</a></li>
+                    <li><a href="login.html" style="color: var(--text-secondary); transition: var(--transition);">Login Portal</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="margin-bottom: 1rem;">Dashboards Preview <span style="font-size: 0.7rem; background: var(--primary); color: white; padding: 2px 6px; border-radius: 10px; margin-left: 5px;">Dev</span></h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="student-dashboard.html" style="color: var(--text-secondary); transition: var(--transition);">Student Dashboard</a></li>
+                    <li><a href="admin-dashboard.html" style="color: var(--text-secondary); transition: var(--transition);">Admin Dashboard</a></li>
+                    <li><a href="kitchen-panel.html" style="color: var(--text-secondary); transition: var(--transition);">Kitchen Panel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; border-top: 1px solid var(--border); padding-top: 2rem;">
+            <p>&copy; 2026 SmartCanteen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

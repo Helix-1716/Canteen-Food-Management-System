@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Canteen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container" style="max-width: 100%; padding: 0 2rem;">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> SmartCanteen</a>
+                <div class="nav-links">
+                    <button id="cart-btn" class="btn btn-outline" style="border: none; position: relative; display: flex; align-items: center; gap: 0.5rem; background: transparent;">
+                        <i class="fa-solid fa-cart-shopping"></i> Cart
+                        <span id="cart-badge" style="position: absolute; top: 0px; right: -5px; background: #ef4444; color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; display: flex; align-items: center; justify-content: center;">0</span>
+                    </button>
+                    <button id="theme-btn" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+                    <button id="logout-btn" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.25rem;">Student Dashboard</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary);">Welcome, User!</p>
+            </div>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><a href="#" class="btn btn-primary" style="width: 100%; justify-content: flex-start; background-color: rgba(37, 99, 235, 0.1); color: var(--primary);"><i class="fa-solid fa-compass" style="width: 20px;"></i> Explore Menu</a></li>
+                <li><a href="#" class="btn btn-outline" style="width: 100%; justify-content: flex-start; border: none;"><i class="fa-solid fa-clock-rotate-left" style="width: 20px;"></i> Order History</a></li>
+                <li><a href="#" class="btn btn-outline" style="width: 100%; justify-content: flex-start; border: none;"><i class="fa-solid fa-heart" style="width: 20px;"></i> Favorites</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="search-bar">
+                <div class="search-input">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="search-food" class="form-control" placeholder="Search for food, drinks, snacks...">
+                </div>
+            </div>
+
+            <div class="categories">
+                <button class="category-pill active" data-category="all">All</button>
+                <button class="category-pill" data-category="breakfast">Breakfast</button>
+                <button class="category-pill" data-category="lunch">Lunch</button>
+                <button class="category-pill" data-category="snacks">Snacks</button>
+                <button class="category-pill" data-category="drinks">Drinks</button>
+            </div>
+
+            <div class="food-grid" id="food-grid">
+                <!-- Javascript will load food items here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p style="text-align:center; color: var(--text-secondary); margin-top:20px;">Cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total" id="cart-total">Total: ₹0</div>
+            <button class="btn btn-primary" id="place-order-btn" style="width: 100%;" disabled>Place Order <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-check modal-icon"></i>
+            <h2>Order Placed!</h2>
+            <p>Your order token is:</p>
+            <div class="token-number" id="modal-token">#000</div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Status: Preparing<br>Estimated Time: 10 minutes</p>
+            <button class="btn btn-primary" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

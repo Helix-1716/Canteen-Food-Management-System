@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen - Smart Canteen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container" style="max-width: 100%; padding: 0 2rem;">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-fire-burner"></i> KitchenStaff</a>
+                <div class="nav-links">
+                    <button id="theme-btn" class="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+                    <button id="logout-btn" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content" style="max-width: 1400px; margin: 0 auto; padding-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <h2>Live Orders</h2>
+                <p style="color: var(--text-secondary);">Monitor and manage incoming food orders.</p>
+            </div>
+            <div>
+                <span class="status-badge status-available" style="padding: 0.5rem 1rem;"><i class="fa-solid fa-circle-dot fa-fade" style="margin-right: 0.5rem;"></i> Auto-refreshing</span>
+            </div>
+        </div>
+
+        <div class="orders-grid" id="kitchen-orders">
+            <!-- Loaded via JS -->
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
